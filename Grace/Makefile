@@ -1,14 +1,13 @@
 SRC		=	Grace.c
-SRCDIR	=	src
 OBJ		=	$(SRC:.c=.o)
 NAME	=	Grace
-OUTPUT	=	output
 CC		=	clang
 CFLAGS	=	-Wall -Wextra -Werror 
+TEST_F	= 	Grace_kid.c
 
 .PHONY			:	all re clean fclean
 
-all				:	$(NAME)
+all				:	$(NAME) Makefile
 
 $(NAME)			:	$(OBJ) Makefile
 					$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
@@ -28,7 +27,7 @@ x				: $(NAME)
 					./$(NAME)
 
 test			:
-					clang -Wall -Wextra -Werror -o Colleen Colleen.c; ./Colleen > tmp_Colleen; diff tmp_Colleen Colleen.c
+					clang -Wall -Wextra -Werror -o $(NAME) $(SRC); ./$(NAME) > $(TEST_F); diff $(TEST_F)  $(SRC)
 
 				
 
