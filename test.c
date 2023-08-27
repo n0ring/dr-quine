@@ -20,16 +20,17 @@ int main() {
 
 
 
-sully i = 5
-bin
-sully_5 i = 5
-bin
-sully_4 i = 4
-bin
-sully_3 i = 3
-bin
-sully_2 i = 2
-bin
-sully_1 i = 1
-bin
-sully_0 i = 0
+sully.c i = 5
+sully
+Sully_5.c i = 5
+sully_5
+Sully_4.c i = 4
+sully_4 
+Sully_3.c i = 3
+sully_3
+Sully_2.c i = 2
+sully_2
+Sully_1.c i = 1
+sully_1
+Sully_0.c i = 0
+
